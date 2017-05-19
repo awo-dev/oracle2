@@ -23,7 +23,7 @@ while true; do
     [4]* )
       if [ -z "$fqdn" ]; then getFQDN; fi
       if [ -z "$ip" ]; then getIP; fi
-      ./includes/linux/setup_hosts.sh $fqdn $externalIP;;
+      ./includes/linux/setup_hosts.sh $fqdn $subdomain $externalIP;;
     [q]* ) echo "Exiting program."; break;;
     * ) echo "Select one of the possibilities. Try again.";
   esac
