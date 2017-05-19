@@ -13,6 +13,7 @@ echo " 5 - Change Formsweb"
 echo " 6 - Change Oracle vHosts"
 echo " 7 - Configure ORDS"
 echo " 8 - Generate SSL Certificates using Lets Encrypt"
+echo " 9 - Setup Lets Encrypt Automatic Renewal"
 echo " q - Exit"
 
 while true; do
