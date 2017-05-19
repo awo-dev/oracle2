@@ -15,17 +15,11 @@ while true; do
   case $choice in
     [1]* ) getFQDN;;
     [2]* ) getIP;;
-    [3]* )
-      if [ -z "$ip"]; then
-        getIP;
-      fi
-      ./includes/linux/setup_network.sh $internalIP $externalIP;;
+    [3]* ) # Setting up networking
+      if [ -z "$fqdn" ]; then getFQDN; fi
+      if [ -z "$ip" ]; then getIP; fi
+      ./includes/linux/setup_network.sh $fqdn $internalIP $externalIP;;
     [q]* ) echo "Exiting program."; break;;
     * ) echo "Select one of the possibilities. Try again.";
   esac
 done
-
-echo "Program done."
-echo "FQDN = $fqdn";
-echo "Internal: $internalIP";
-echo "External: $externalIP";
