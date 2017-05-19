@@ -15,6 +15,7 @@ echo " 7 - Configure ORDS"
 echo " 8 - Generate SSL Certificates using Lets Encrypt"
 echo " 9 - Setup Lets Encrypt Automatic Renewal"
 echo " 10 - Create Apache (httpd) virtual hosts"
+echo " full - Full Configuration"
 echo " q - Exit"
 
 while true; do
@@ -46,6 +47,8 @@ while true; do
     [10]* ) # Create httpd vHosts
       if [ -z "$fqdn" ]; then getFQDN; fi
       ./includes/linux/apache_add_vhost.sh
+    [full]* ) # Full Configuration
+      ./includes/full-config.sh
     [q]* ) echo "Exiting program."; break;;
     * ) echo "Select one of the possibilities. Try again.";
   esac
