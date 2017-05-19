@@ -3,8 +3,10 @@
 
 source ./includes/setVars.sh
 
-external=$1; # 10.174.234.x
-internal=$2; # 10.0.3.x
+fqdn=$1:     # my-domain.tld
+external=$2; # 10.174.234.x
+internal=$3; # 10.0.3.x
 
+echo "fqdn = $fqdn";
 echo "internal = $internal";
 echo "external = $external";
