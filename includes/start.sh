@@ -31,7 +31,7 @@ while true; do
       ./includes/oracle/formsweb.sh $fqdn;;
     [6]* ) # Setting up Oracle vHosts
       if [ -z "$fqdn" ]; then getFQDN; fi
-      ./includes/oracle/formsweb.sh $fqdn;;
+      ./includes/oracle/vhosts.sh $fqdn;;
     [q]* ) echo "Exiting program."; break;;
     * ) echo "Select one of the possibilities. Try again.";
   esac
