@@ -27,7 +27,7 @@ while true; do
       ./includes/linux/setup_hosts.sh $fqdn $subdomain $externalIP;;
     [5]* ) # Setting up forms.cfg
     if [ -z "$fqdn" ]; then getFQDN; fi
-    ./includes/oracle/formsweb.sh;;
+    ./includes/oracle/formsweb.sh $fqdn;;
     [q]* ) echo "Exiting program."; break;;
     * ) echo "Select one of the possibilities. Try again.";
   esac
