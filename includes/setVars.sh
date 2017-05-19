@@ -8,12 +8,12 @@ function init() {
 }
 
 function getFQDN() {
-  read -p "enter new FQDN (ex: my-domain.tld): " fqdn
+  read -p "enter new FQDN (ex: my-domain.tld): " $fqdn
 }
 
 function getIP() {
   read -p "Enter ip (ex: 5): 10.174.234." ip
 
-  $externalIP="10.174.234.$ip/24"
-  $internalIP="10.0.3.$ip/24"
+  $externalIP = "10.174.234.$ip/24"
+  $internalIP = "10.0.3.$ip/24"
 }
