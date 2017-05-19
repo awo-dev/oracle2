@@ -8,6 +8,7 @@ echo "Choose one of the following possibilities:"
 echo " 1 - Testing FQDN"
 echo " 2 - Testing IP"
 echo " 3 - Setup Network"
+echo " 4 - Change Hosts Files"
 echo " q - Exit"
 
 while true; do
