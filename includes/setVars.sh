@@ -9,7 +9,7 @@ function promptValue() {
 function getIP() {
   ip=$(promptValue "Enter ip (ex: 5): 10.174.234.");
   internalIP="10.174.234.$ip/24";
-  externalIP="10.0.3.$ip/24";;
+  externalIP="10.0.3.$ip/24";
 }
 
 function getFQDN() {
