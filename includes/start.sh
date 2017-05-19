@@ -19,7 +19,7 @@ while true; do
       if [ -z "$ip"]; then
         getIP;
       fi
-      ./includes/linux/setup_network.sh;;
+      ./includes/linux/setup_network.sh $internalIP $externalIP;;
     [q]* ) echo "Exiting program."; break;;
     * ) echo "Select one of the possibilities. Try again.";
   esac
