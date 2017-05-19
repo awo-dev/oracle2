@@ -23,6 +23,10 @@ while true; do
   esac
 done
 
+if [ -z "$fqdn" ]; then
+  echo "FQDN has not been set."
+fi
+
 echo "Program done."
 echo "FQDN = $fqdn";
 echo "Internal: $internalIP";
