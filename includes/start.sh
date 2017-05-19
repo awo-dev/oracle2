@@ -9,6 +9,7 @@ echo " 1 - Testing FQDN"
 echo " 2 - Testing IP"
 echo " 3 - Setup Network"
 echo " 4 - Change Hosts Files"
+echo " 5 - Change Formsweb"
 echo " q - Exit"
 
 while true; do
@@ -24,6 +25,9 @@ while true; do
       if [ -z "$fqdn" ]; then getFQDN; fi
       if [ -z "$ip" ]; then getIP; fi
       ./includes/linux/setup_hosts.sh $fqdn $subdomain $externalIP;;
+    [5]* ) # Setting up forms.cfg
+    if [ -z "$fqdn" ]; then getFQDN; fi
+    ./includes/oracle/formsweb.sh
     [q]* ) echo "Exiting program."; break;;
     * ) echo "Select one of the possibilities. Try again.";
   esac
