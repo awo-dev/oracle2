@@ -16,7 +16,7 @@ externalIP=$3;
 sed -e "/sbsv12l6master/c $externalIP\t$fqdn\t$subdomain" /etc/hosts > ./new_hosts.txt
 #sed -e "s/\S*\(sbsv12l6master\)\S*//g" -e "/^#127.0.0.1/ s/$/ $fqdn/" -e "/^#10.174.234.98/ s/$/ $fqdn/" -e "s/10.174.234.98/$externalIP/" /etc/hosts > ./new_hosts.txt
 #mv /etc/hosts /etc/hosts.original
-#mv ./new_hosts.txt /etc/hosts
+mv ./new_hosts.txt /etc/hosts.org
 
 # To fix the SELinux Shit:
 #chcon -R -h -t httpd_sys_script_exec_t /etc/hosts
