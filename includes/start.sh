@@ -48,6 +48,8 @@ while true; do
       if [ -z "$fqdn" ]; then getFQDN; fi
       ./includes/linux/apache_add_vhost.sh
     [full]* ) # Full Configuration
+      if [ -z "$fqdn" ]; then getFQDN; fi
+      if [ -z "$ip" ]; then getIP; fi
       ./includes/full-config.sh
     [q]* ) echo "Exiting program."; break;;
     * ) echo "Select one of the possibilities. Try again.";
