@@ -13,5 +13,8 @@ function getIP() {
 }
 
 function getFQDN() {
-  fqdn=$(promptValue "Enter a valid FQDN (fx my-domain.tld): ")
+  domain=$(promptValue "Enter domain name (fx my-domain.tld): ")
+  subdomain=$(promptValue "Enter subdomain (fx sub (sub.my-domain.tld)): ")
+  fqdn=$subdomain+$domain
+  echo "FQDN = $fqdn";
 }
