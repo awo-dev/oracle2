@@ -20,6 +20,10 @@ while true; do
       if [ -z "$fqdn" ]; then getFQDN; fi
       if [ -z "$ip" ]; then getIP; fi
       ./includes/linux/setup_network.sh $fqdn $internalIP $externalIP;;
+    [4]* )
+      if [ -z "$fqdn" ]; then getFQDN; fi
+      if [ -z "$ip" ]; then getIP; fi
+      ./includes/linux/setup_hosts.sh $fqdn $externalIP;;
     [q]* ) echo "Exiting program."; break;;
     * ) echo "Select one of the possibilities. Try again.";
   esac
