@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 # This is for setting up the networking.
 
 if [ -z "$fqdn" ]; then
