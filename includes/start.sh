@@ -13,8 +13,8 @@ echo " q - Exit"
 while true; do
   read -p "Choice: " choice
   case $choice in
-    [1]* ) fqdn=$(promptValue "Enter a valid FQDN (fx my-domain.tld): ");;
-    [2]* ) getIP; ip=$(promptValue "Enter ip (ex: 5): 10.174.234."); internalIP="10.174.234.$ip/24"; externalIP="10.0.3.$ip/24";;
+    [1]* ) getFQDN;;
+    [2]* ) getIP;;
     [q]* ) echo "Exiting program."; break;;
     * ) echo "Select one of the possibilities. Try again.";
   esac
