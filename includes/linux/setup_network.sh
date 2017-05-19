@@ -1,9 +1,10 @@
 #!/bin/bash
 # This is for setting up the networking.
 
-if [ -z "$fqdn" ]; then
-  echo "FQDN has not been set.";
-  getFQDN;
-fi
+source ./includes/setVars.sh
 
-echo "FQDN = $fqdn";
+external=$1; # 10.174.234.x
+internal=$2; # 10.0.3.x
+
+echo "internal = $internal";
+echo "external = $external";
