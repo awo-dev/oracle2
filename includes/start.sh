@@ -11,6 +11,7 @@ echo " 3 - Setup Network"
 echo " 4 - Change Hosts Files"
 echo " 5 - Change Formsweb"
 echo " 6 - Change Oracle vHosts"
+echo " 7 - Configure ORDS"
 echo " q - Exit"
 
 while true; do
@@ -32,6 +33,8 @@ while true; do
     [6]* ) # Setting up Oracle vHosts
       if [ -z "$fqdn" ]; then getFQDN; fi
       ./includes/oracle/vhosts.sh $fqdn;;
+    [7]* ) # Configure ORDS
+      ./includes/oracle/ords.sh;;
     [q]* ) echo "Exiting program."; break;;
     * ) echo "Select one of the possibilities. Try again.";
   esac
