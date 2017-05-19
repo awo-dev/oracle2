@@ -12,6 +12,7 @@ echo " 4 - Change Hosts Files"
 echo " 5 - Change Formsweb"
 echo " 6 - Change Oracle vHosts"
 echo " 7 - Configure ORDS"
+echo " 8 - Generate SSL Certificates using Lets Encrypt"
 echo " q - Exit"
 
 while true; do
@@ -35,6 +36,7 @@ while true; do
       ./includes/oracle/vhosts.sh $fqdn;;
     [7]* ) # Configure ORDS
       ./includes/oracle/ords.sh;;
+    [8]* ) # Generate SSL Certificates using Lets Encrypt
     [q]* ) echo "Exiting program."; break;;
     * ) echo "Select one of the possibilities. Try again.";
   esac
