@@ -8,7 +8,7 @@ echo " 1 - Testing FQDN"
 while true; do
   read -p "Choice: " choice
   case $choice in
-    [1]* ) getFQDN; $loop = false;;
+    [1]* ) getFQDN; break;;
     [q]* ) echo "Exiting program."; break;;
     * ) echo "Select one of the possibilities. Try again.";
   esac
