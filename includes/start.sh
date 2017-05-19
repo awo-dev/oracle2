@@ -13,5 +13,6 @@ while true; do
     * ) echo "Select one of the possibilities. Try again.";
   esac
 
+echo "Program done."
 echo "FQDN = $fqdn";
 done
