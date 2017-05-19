@@ -9,10 +9,6 @@ echo " 1 - Testing FQDN"
 echo " 2 - Testing IP"
 echo " q - Exit"
 
-if [ -z "$fqdn" ]; then
-  echo "FQDN has not been set."
-fi
-
 while true; do
   read -p "Choice: " choice
   case $choice in
@@ -22,10 +18,6 @@ while true; do
     * ) echo "Select one of the possibilities. Try again.";
   esac
 done
-
-if [ -z "$fqdn" ]; then
-  echo "FQDN has not been set."
-fi
 
 echo "Program done."
 echo "FQDN = $fqdn";
