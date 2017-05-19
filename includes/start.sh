@@ -14,6 +14,7 @@ echo " 6 - Change Oracle vHosts"
 echo " 7 - Configure ORDS"
 echo " 8 - Generate SSL Certificates using Lets Encrypt"
 echo " 9 - Setup Lets Encrypt Automatic Renewal"
+echo " 10 - Create Apache (httpd) virtual hosts"
 echo " q - Exit"
 
 while true; do
@@ -42,6 +43,9 @@ while true; do
       ./includes/linux/letsencrypt.sh $fqdn;;
     [9]* ) # Enable Lets Encrypt Automatic Renewal
       ./includes/linux/le-autorenew.sh
+    [10]* ) # Create httpd vHosts
+      if [ -z "$fqdn" ]; then getFQDN; fi
+      ./includes/linux/apache_add_vhost.sh
     [q]* ) echo "Exiting program."; break;;
     * ) echo "Select one of the possibilities. Try again.";
   esac
