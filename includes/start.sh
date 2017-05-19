@@ -38,6 +38,10 @@ while true; do
     [7]* ) # Configure ORDS
       ./includes/oracle/ords.sh;;
     [8]* ) # Generate SSL Certificates using Lets Encrypt
+      if [ -z "$fqdn" ]; then getFQDN; fi
+      ./includes/linux/letsencrypt.sh $fqdn;;
+    [9]* ) # Enable Lets Encrypt Automatic Renewal
+      ./includes/linux/le-autorenew.sh
     [q]* ) echo "Exiting program."; break;;
     * ) echo "Select one of the possibilities. Try again.";
   esac
