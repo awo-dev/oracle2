@@ -1,7 +1,7 @@
 # Oracle Deploy
 This is a script coded for at custom server setup.
 
-The script is intended for the server at Oracle VM Manager called "SBSv12l6MASTER" (in cluster pool 3).
+The script is intended for the server at Oracle VM Manager called "SBSv12l6MASTER".
 
 Oracle Forms and Reports 12c has been pre-installed and pre-configured. There is a small Oracle Enterprise database server installed, but its only use is for LDAP. This instance is supposed to use an external database server. The server OS is Oracle6 (would technically work on RHEL6, however this template is Oracle6).
 
