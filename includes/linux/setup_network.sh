@@ -11,7 +11,13 @@ echo "Hostname = $fqdn";
 echo "Internal = $internal";
 echo "External = $external";
 
-nmcli g hostname $fqdn;
+#nmcli g hostname $fqdn; # Only RHEL7
+#Change hostname
+hostname $fqdn;
+sed -e "/sbsv12i6master/c HOSTNAME=$fqdn" /etc/sysconfig/network > new_network
+mv /etc/sysconfig/network /etc/sysconfig/network.original
+mv new_network /etc/sysconfig/network
+
 nmcli con mod eth0 ipv4.addr $external ipv4.gateway 10.174.234.1
 nmcli con mod eth1 ipv4.addr $internal
 
