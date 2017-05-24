@@ -69,6 +69,8 @@ while true; do
     esac
 done
 
+echo "Virtual hosts added to httpd."
+
 # To fix the SELinux Shit:
 #chcon -R -h -t httpd_sys_script_exec_t /var/html/error.log    # Should be added in the master template
 #chcon -R -h -t httpd_sys_script_exec_t /var/html/requests.log # Should be added in the master template

@@ -45,6 +45,8 @@ $db_pwd
 2
 END
 
+echo "ORDS Install complete."
+
 while true; do
     read -p "Configure RESTful [Y/n]? " yn
     case $yn in
@@ -62,3 +64,5 @@ sed '/<\/properties>/{
 
 chown -R tomcat:tomcat /home/tomcat
 ln -s /home/ordstomcat/ords.war /usr/share/tomcat/webapps/
+
+echo "ORDS installed in tomcat."

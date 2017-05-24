@@ -17,5 +17,7 @@ $1
 exit;
 END
 
+echo "RESTful has ben configured."
+
 # exit (go back to root user)
 exit

@@ -18,5 +18,7 @@ sed -e "/sbsv12l6master/c sbsv12l6master.softbase.dk\tsbsv12l6master\t$externalI
 mv /etc/hosts /etc/hosts.org
 mv ./new_hosts.txt /etc/hosts
 
+echo "Created new hosts file."
+
 # To fix the SELinux Shit:
 #chcon -R -h -t httpd_sys_script_exec_t /etc/hosts
