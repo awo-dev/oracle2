@@ -26,8 +26,8 @@ mv new_network /etc/sysconfig/network
 sed -e "/10.174.234.98/c IPADDR=$external" /etc/sysconfig/network-scripts/ifcfg-eth0 > new_eth0
 sed -e "/10.0.3.98/c IPADDR=$internal" /etc/sysconfig/network-scripts/ifcfg-eth1 > new_eth1
 
-mv /etc/sysconfig/network-scripts/ifcfg-eth0 /etc/sysconfig/network-scripts/ifcfg-eth0.original
-mv /etc/sysconfig/network-scripts/ifcfg-eth1 /etc/sysconfig/network-scripts/ifcfg-eth1.original
+rm /etc/sysconfig/network-scripts/ifcfg-eth0
+rm /etc/sysconfig/network-scripts/ifcfg-eth1
 
 mv new_eth0 /etc/sysconfig/network-scripts/ifcfg-eth0
 mv new_eth1 /etc/sysconfig/network-scripts/ifcfg-eth1
