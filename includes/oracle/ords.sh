@@ -49,7 +49,7 @@ while true; do
     read -p "Configure RESTful [Y/n]? " yn
     case $yn in
         [Nn]* ) exit; break;;
-        * ) ./includes/configure_restful.sh $db_pwd;break;;
+        * ) ./includes/oracle/configure_restful.sh $db_pwd;break;;
     esac
 done
 

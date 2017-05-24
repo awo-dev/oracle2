@@ -1,6 +1,8 @@
 #!/bin/bash
-echo -n "Password for database user sys: "
-read -s sys_pwd
+#echo -n "Password for database user sys: "
+#read -s sys_pwd
+
+sys_pwd=$1;
 
 # Switch user and set environment
 su - oracle
