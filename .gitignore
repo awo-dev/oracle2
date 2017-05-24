@@ -2,3 +2,5 @@ new_hosts.txt
 new_formsweb.cfg
 new_config.xml
 new_network
+new_eth0
+new_eth1
