@@ -14,7 +14,7 @@ echo "External = $external";
 #nmcli g hostname $fqdn; # Only RHEL7
 #Change hostname
 hostname $fqdn;
-sed -e "/sbsv12i6master/c HOSTNAME=$fqdn" /etc/sysconfig/network > new_network
+sed -e "/sbsv12l6master/c HOSTNAME=$fqdn" /etc/sysconfig/network > new_network
 mv /etc/sysconfig/network /etc/sysconfig/network.original
 mv new_network /etc/sysconfig/network
 
