@@ -26,7 +26,7 @@ while true; do
     [1]* ) # Setting up networking
       if [ -z "$fqdn" ]; then getFQDN; fi
       if [ -z "$ip" ]; then getIP; fi
-      ./includes/linux/setup_network.sh $fqdn $internalIP $externalIP;;
+      ./includes/linux/setup_network.sh $fqdn $externalIP $internalIP;;
     [2]* )
       if [ -z "$fqdn" ]; then getFQDN; fi
       if [ -z "$ip" ]; then getIP; fi
